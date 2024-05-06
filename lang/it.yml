@@ -17,7 +17,7 @@ it:
   AdvancedWorkflowAdmin:
     GridFieldTitleAssignedAll: 'Tutti gli oggetti in sospeso'
     LastEdited: Cambiato
-    SORTORDERSAVED: 'L''ordinamento e'' stato salvato.'
+    SORTORDERSAVED: "L'ordinamento e' stato salvato."
     Title: Titolo
     WorkflowStatus: 'Azione corrente'
   AllowEditing:
@@ -28,7 +28,7 @@ it:
     GROUPS: Gruppi
     USERS: Utenti
   FrontEndWorkflowController:
-    FRONTENDACTION_TRANSITION_EXCEPTION: 'Non hai i permessi per eseguire quest''azione'
+    FRONTENDACTION_TRANSITION_EXCEPTION: "Non hai i permessi per eseguire quest'azione"
   NotifyUsersWorkflowAction:
     EMAILSUBJECT: 'Oggetto e-mail'
     EMAILTEMPLATE: 'Schema e-mail'
@@ -104,7 +104,7 @@ it:
   WorkflowDefinition:
     DESCRIPTION: Descrizione
     GROUPS: 'Ristretto ai Gruppi'
-    LATEST_VERSION: 'L''ultima versione e'' %s'
+    LATEST_VERSION: "L'ultima versione e' %s"
     REMINDEREMAIL: 'Email di Reminder'
     TEMPLATE_INFO: 'Template Info'
     TEMPLATE_NAME: 'Sorgente Template'
