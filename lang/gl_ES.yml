@@ -39,7 +39,6 @@ gl_ES:
   WorkflowField:
     CreateLabel: Crear
     DeleteAction: Eliminar
-    EditAction: Edit
   WorkflowInstance:
     TitleLabel: Título
   WorkflowList:

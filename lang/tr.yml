@@ -37,7 +37,6 @@ tr:
   WorkflowField:
     CreateLabel: Oluştur
     DeleteAction: Sil
-    EditAction: Edit
   WorkflowInstance:
     TitleLabel: Başlık
   WorkflowReminderEmail:

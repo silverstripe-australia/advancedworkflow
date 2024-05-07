@@ -12,7 +12,6 @@ da:
     db_Filename: Filnavn
   Symbiote\AdvancedWorkflow\DataObjects\WorkflowAction:
     db_Title: Titel
-    db_Type: Type
     has_one_Member: Bruger
   Symbiote\AdvancedWorkflow\DataObjects\WorkflowActionInstance:
     has_one_Member: Bruger
@@ -25,12 +24,10 @@ da:
     many_many_Groups: Grupper
   Symbiote\AdvancedWorkflow\DataObjects\WorkflowTransition:
     db_Title: Titel
-    db_Type: Type
     many_many_Groups: Grupper
   WorkflowAction:
     Author: Forfatter
     TITLE: Titel
-    TypeLabel: Type
   WorkflowActionInstance:
     Title: Titel
   WorkflowDefinition:
@@ -46,5 +43,3 @@ da:
     HeadingTitle: Titel
   WorkflowReminderTask:
     SAVE: Gem
-  WorkflowTransition:
-    TYPE: Type

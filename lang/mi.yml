@@ -179,7 +179,6 @@ mi:
     ActionLogTitle: Rangitaki
     EXECUTE_EXCEPTION: 'I whakamātauria te tīmatanga o tētahi tauira reremahi muhu #%s!'
     REASSIGN_HEADER: 'Tautapatia anō te reremahi'
-    TITLE_FOR_DO: '%s - %s'
     TITLE_STUB: 'Tauira #%s o te %s'
     TargetClassLabel: 'Tauaha Ūnga'
     TargetIDLabel: Ūnga

@@ -183,7 +183,6 @@ zh:
     ActionLogTitle: 日志
     EXECUTE_EXCEPTION: '试图启动一个无效的工作流实例 #%s！'
     REASSIGN_HEADER: 重新分配工作流
-    TITLE_FOR_DO: '%s - %s'
     TITLE_STUB: '实例 %s 之 #%s'
     TargetClassLabel: 玻靶
     TargetIDLabel: 目标
@@ -198,7 +197,7 @@ zh:
     TableHeaderSubmitted: 提交
   WorkflowReminderEmail:
     Action: 点击此处启动工作流程
-    Content: '这是一个自动提醒，您当前被分配的工作流程 ''{title}'' 已经有 {days} 天未被操作了。该工作流程上次更新时间为 {date} {time}。'
+    Content: "这是一个自动提醒，您当前被分配的工作流程 '{title}' 已经有 {days} 天未被操作了。该工作流程上次更新时间为 {date} {time}。"
     HeadingTitle: 题目
   WorkflowReminderTask:
     SAVE: 保存

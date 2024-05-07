@@ -16,6 +16,7 @@ pl:
     db_Filename: 'Nazwa pliku'
     db_Name: Nazwa
   Symbiote\AdvancedWorkflow\DataObjects\WorkflowAction:
+    db_Sort: Sortuj
     db_Title: Tytuł
     db_Type: 'Rodzaj strony'
     has_one_Member: Użytkownik
@@ -23,6 +24,7 @@ pl:
     has_one_Member: Użytkownik
   Symbiote\AdvancedWorkflow\DataObjects\WorkflowDefinition:
     db_Description: Opis
+    db_Sort: Sortuj
     db_Title: Tytuł
     has_many_Actions: Akcje
     many_many_Groups: Grupy
@@ -33,6 +35,7 @@ pl:
     many_many_Groups: Grupy
     many_many_Users: Użytkownicy
   Symbiote\AdvancedWorkflow\DataObjects\WorkflowTransition:
+    db_Sort: Sortuj
     db_Title: Tytuł
     db_Type: 'Rodzaj strony'
     many_many_Groups: Grupy

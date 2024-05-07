@@ -42,7 +42,6 @@ pt:
   WorkflowField:
     CreateLabel: Criar
     DeleteAction: Apagar
-    EditAction: Edit
   WorkflowInstance:
     TitleLabel: Título
   WorkflowList:

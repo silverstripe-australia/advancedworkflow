@@ -37,7 +37,6 @@ ja_JP:
   WorkflowField:
     CreateLabel: 作成
     DeleteAction: 削除
-    EditAction: Edit
   WorkflowInstance:
     TitleLabel: タイトル
   WorkflowList:

@@ -47,7 +47,6 @@ id_ID:
   WorkflowField:
     CreateLabel: Buat
     DeleteAction: Hapus
-    EditAction: Edit
   WorkflowInstance:
     TitleLabel: Judul
   WorkflowList:

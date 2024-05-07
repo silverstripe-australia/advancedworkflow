@@ -70,9 +70,7 @@ id:
   WorkflowField:
     CreateLabel: Buat
     DeleteAction: Hapus
-    EditAction: Edit
   WorkflowInstance:
-    ActionLogTitle: Log
     TitleLabel: Judul
   WorkflowList:
     TableHeaderActions: Tindakan

@@ -13,8 +13,6 @@ et_EE:
     many_many_Users: Kasutajad
   Symbiote\AdvancedWorkflow\Actions\NotifyUsersWorkflowAction:
     db_EmailSubject: 'Email Subject'
-  Symbiote\AdvancedWorkflow\Actions\SetPropertyWorkflowAction:
-    db_Value: Value
   Symbiote\AdvancedWorkflow\DataObjects\ImportedWorkflowTemplate:
     db_Content: Sisu
     db_Filename: Failinimi

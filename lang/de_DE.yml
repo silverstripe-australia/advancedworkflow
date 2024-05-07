@@ -15,8 +15,6 @@ de_DE:
     db_EmailTemplate: E-Mail-Template
   Symbiote\AdvancedWorkflow\Actions\SetPropertyWorkflowAction:
     db_Value: Wert
-  Symbiote\AdvancedWorkflow\DataObjects\ImportedWorkflowTemplate:
-    db_Name: Name
   Symbiote\AdvancedWorkflow\DataObjects\WorkflowAction:
     db_Title: Titel
     db_Type: Typ

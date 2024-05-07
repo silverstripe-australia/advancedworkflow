@@ -8,15 +8,15 @@ fr:
     USERS: Utilisateurs
   NotifyUsersWorkflowAction:
     EMAILFROM: 'Email de'
-    EMAILSUBJECT: 'Sujet de l''email'
-    EMAILTEMPLATE: 'Modèle d''e-mail'
+    EMAILSUBJECT: "Sujet de l'email"
+    EMAILTEMPLATE: "Modèle d'e-mail"
   Symbiote\AdvancedWorkflow\Actions\AssignUsersToWorkflowAction:
     many_many_Groups: Groupes
     many_many_Users: Utilisateurs
   Symbiote\AdvancedWorkflow\Actions\NotifyUsersWorkflowAction:
     db_EmailFrom: 'Email de'
-    db_EmailSubject: 'Sujet de l''email'
-    db_EmailTemplate: 'Modèle d''e-mail'
+    db_EmailSubject: "Sujet de l'email"
+    db_EmailTemplate: "Modèle d'e-mail"
   Symbiote\AdvancedWorkflow\Actions\SetPropertyWorkflowAction:
     db_Value: Valeur
   Symbiote\AdvancedWorkflow\DataObjects\ImportedWorkflowTemplate:
@@ -27,27 +27,22 @@ fr:
     db_Comment: Commentaire
     db_Sort: Tri
     db_Title: Titre
-    db_Type: Type
     has_one_Member: Membre
   Symbiote\AdvancedWorkflow\DataObjects\WorkflowActionInstance:
     db_Comment: Commentaire
     has_one_Member: Membre
   Symbiote\AdvancedWorkflow\DataObjects\WorkflowDefinition:
-    db_Description: Description
     db_Sort: Tri
     db_Title: Titre
-    has_many_Actions: Actions
     many_many_Groups: Groupes
     many_many_Users: Utilisateurs
   Symbiote\AdvancedWorkflow\DataObjects\WorkflowInstance:
     db_Title: Titre
-    has_many_Actions: Actions
     many_many_Groups: Groupes
     many_many_Users: Utilisateurs
   Symbiote\AdvancedWorkflow\DataObjects\WorkflowTransition:
     db_Sort: Tri
     db_Title: Titre
-    db_Type: Type
     many_many_Groups: Groupes
     many_many_Users: Utilisateurs
   WorkflowAction:
@@ -56,11 +51,9 @@ fr:
     CommentLabel: Commentaire
     FRONTENDCOMMENT: Commentaire
     TITLE: Titre
-    TypeLabel: Type
   WorkflowActionInstance:
     Title: Titre
   WorkflowDefinition:
-    DESCRIPTION: Description
     TITLE: Titre
   WorkflowField:
     CreateLabel: Créer
@@ -68,11 +61,7 @@ fr:
     EditAction: Éditer
   WorkflowInstance:
     TitleLabel: Titre
-  WorkflowList:
-    TableHeaderActions: Actions
   WorkflowReminderEmail:
     HeadingTitle: Titre
   WorkflowReminderTask:
     SAVE: Sauvegarder
-  WorkflowTransition:
-    TYPE: Type

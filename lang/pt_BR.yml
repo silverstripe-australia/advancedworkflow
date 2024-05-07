@@ -74,7 +74,6 @@ pt_BR:
     TITLE: Título
   WorkflowField:
     DeleteAction: Excluir
-    EditAction: Edit
   WorkflowInstance:
     TitleLabel: Título
   WorkflowReminderEmail:

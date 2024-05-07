@@ -11,8 +11,6 @@ sr_RS:
     many_many_Users: Корисници
   Symbiote\AdvancedWorkflow\Actions\NotifyUsersWorkflowAction:
     db_EmailSubject: 'Email Subject'
-  Symbiote\AdvancedWorkflow\Actions\SetPropertyWorkflowAction:
-    db_Value: Value
   Symbiote\AdvancedWorkflow\DataObjects\ImportedWorkflowTemplate:
     db_Content: Садржај
     db_Filename: 'Име датотеке'

@@ -36,7 +36,6 @@ es:
     SCHEDULEJOBTITLE: '{type} programado de {object}'
   AllowEditing:
     ContentSettings: 'Configuración de contenido'
-    NoString: 'No'
   AssignUsersToWorkflowAction:
     ASSIGNUSERS: 'Asignar usuarios'
     GROUPS: Grupos
@@ -191,7 +190,6 @@ es:
     ActionLogTitle: Registro
     EXECUTE_EXCEPTION: '¡Se intentó comenzar una instancia inválida de flujo de trabajo #%s!'
     REASSIGN_HEADER: 'Reasignar flujo de trabajo'
-    TITLE_FOR_DO: '%s - %s'
     TITLE_STUB: 'Instancia #%s de %s'
     TargetIDLabel: Destino
     TitleLabel: Título
@@ -200,7 +198,6 @@ es:
   WorkflowList:
     TableHeaderActions: Acciones
     TableHeaderEditedBy: 'Editado por'
-    TableHeaderItem: Item
     TableHeaderSubmitted: Enviado
   WorkflowReminderEmail:
     Content: "Este es un recordatorio automático de que el flujo de trabajo '{title}' que Ud actualmente\n⇥asignó, no fue accionado por {days} días. El flujo\n⇥de trabajo se actualizó por última vez el {date} a las {time}."

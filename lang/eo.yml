@@ -274,7 +274,6 @@ eo:
     INVALID_YML_FORMAT_NO_PARSE: 'Nevalida YAML-formato. Ne povas analizi.'
   WorkflowEmbargoExpiryExtension:
     ActiveWorkflowStateTitle: Aktiva
-    BADGE_PUBLISH: Embargo
     BADGE_PUBLISH_UNPUBLISH: Embargo+eksvalidiĝo
     BADGE_UNPUBLISH: Eksvalidiĝo
     CompletedWorkflowStateTitle: Kompletigita
@@ -301,7 +300,6 @@ eo:
     ActionLogTitle: Protokolo
     EXECUTE_EXCEPTION: 'Provis startigi nevalidan laborfluan ekzemplon #%s!'
     REASSIGN_HEADER: 'Reagordi laborfluon'
-    TITLE_FOR_DO: '%s - %s'
     TITLE_STUB: 'Ekzemplo #%s el %s'
     TargetClassLabel: 'Cela klaso'
     TargetIDLabel: Celo

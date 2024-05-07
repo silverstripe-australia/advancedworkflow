@@ -36,7 +36,6 @@ nl:
   Symbiote\AdvancedWorkflow\DataObjects\WorkflowDefinition:
     db_Description: Omschrijving
     db_Sort: Volgorde
-    db_Template: Template
     db_Title: Titel
     has_many_Actions: Acties
     many_many_Groups: Groepen

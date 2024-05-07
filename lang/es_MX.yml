@@ -9,8 +9,6 @@ es_MX:
     many_many_Groups: Grupos
   Symbiote\AdvancedWorkflow\Actions\NotifyUsersWorkflowAction:
     db_EmailSubject: 'Email Subject'
-  Symbiote\AdvancedWorkflow\Actions\SetPropertyWorkflowAction:
-    db_Value: Value
   Symbiote\AdvancedWorkflow\DataObjects\ImportedWorkflowTemplate:
     db_Content: Contenido
     db_Filename: 'Nombre del archivo'
