@@ -3,7 +3,7 @@
     .disabled {
       a.action {
         opacity: 0.35;
-        filter: Alpha(Opacity=35);
+        filter: alpha(Opacity=35);
         cursor: default;
       }
     }
