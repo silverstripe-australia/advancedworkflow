@@ -53,6 +53,15 @@ class WorkflowApplicable extends DataExtension
         'AdditionalWorkflowDefinitions' => WorkflowDefinition::class
     ];
 
+    private static array $scaffold_cms_fields_settings = [
+        'ignoreFields' => [
+            'WorkflowDefinition',
+        ],
+        'ignoreRelations' => [
+            'AdditionalWorkflowDefinitions',
+        ],
+    ];
+
     private static $dependencies = [
         'workflowService' => '%$' . WorkflowService::class,
     ];
