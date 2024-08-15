@@ -286,9 +286,7 @@ class AdvancedWorkflowAdmin extends ModelAdmin
             // Title property..
             $instance->setField('Title', $target->getField('Title'));
             $instance->setField('LastEdited', $target->getField('LastEdited'));
-            if (method_exists($target, 'CMSEditLink')) {
-                $instance->setField('ObjectRecordLink', $target->CMSEditLink());
-            }
+            $instance->setField('ObjectRecordLink', $target->getCMSEditLink());
 
             $list->push($instance);
         }
