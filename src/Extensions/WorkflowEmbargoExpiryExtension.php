@@ -547,7 +547,7 @@ class WorkflowEmbargoExpiryExtension extends DataExtension
      * @param Member $member
      * @return bool|null
      */
-    public function canEdit($member)
+    protected function canEdit($member)
     {
         if (!Permission::check('EDIT_EMBARGOED_WORKFLOW') && // not given global/override permission to edit
             !$this->owner->AllowEmbargoedEditing) { // item flagged as not editable

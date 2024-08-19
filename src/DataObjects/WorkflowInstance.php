@@ -669,7 +669,6 @@ class WorkflowInstance extends DataObject
         $fields->push(HiddenField::create('TransitionID', ''));
         // Let the Active Action update the fields that the user can interact with so that data can be
         // stored for the workflow.
-        $action->updateWorkflowFields($fields);
         $action->invokeWithExtensions('updateWorkflowFields', $fields);
         return $fields;
     }

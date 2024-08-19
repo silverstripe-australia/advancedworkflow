@@ -62,7 +62,7 @@ class AdvancedWorkflowExtension extends Extension
      *
      * @param Form $form
      */
-    public function updateEditForm(Form $form)
+    protected function updateEditForm(Form $form)
     {
         Requirements::javascript('symbiote/silverstripe-advancedworkflow:client/dist/js/advancedworkflow.js');
         $service = singleton(WorkflowService::class);
