@@ -304,7 +304,7 @@ class WorkflowApplicable extends DataExtension
         $CMSEditLink = null;
 
         if ($this->owner instanceof CMSPreviewable) {
-            $CMSEditLink = $this->owner->CMSEditLink();
+            $CMSEditLink = $this->owner->getCMSEditLink();
         } elseif ($this->owner->hasMethod('WorkflowLink')) {
             $CMSEditLink = $this->owner->WorkflowLink();
         }

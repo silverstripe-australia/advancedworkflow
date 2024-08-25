@@ -185,7 +185,7 @@ class NotifyUsersWorkflowAction extends WorkflowAction
         }
 
         if ($target instanceof CMSPreviewable) {
-            $result['CMSLink'] = $target->CMSEditLink();
+            $result['CMSLink'] = $target->getCMSEditLink();
         } elseif ($target->hasMethod('WorkflowLink')) {
             $result['CMSLink'] = $target->WorkflowLink();
         }
