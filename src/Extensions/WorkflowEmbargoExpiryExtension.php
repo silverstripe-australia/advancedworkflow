@@ -10,7 +10,7 @@ use SilverStripe\Forms\DatetimeField;
 use SilverStripe\Forms\HeaderField;
 use SilverStripe\Forms\LiteralField;
 use SilverStripe\ORM\ArrayList;
-use SilverStripe\ORM\DataExtension;
+use SilverStripe\Core\Extension;
 use SilverStripe\ORM\DataQuery;
 use SilverStripe\ORM\FieldType\DBDatetime;
 use SilverStripe\ORM\FieldType\DBHTMLText;
@@ -39,9 +39,9 @@ if (!class_exists(QueuedJobDescriptor::class)) {
  * @method QueuedJobDescriptor PublishJob()
  * @method QueuedJobDescriptor UnPublishJob()
  *
- * @extends DataExtension<DataObject&static>
+ * @extends Extension<DataObject&static>
  */
-class WorkflowEmbargoExpiryExtension extends DataExtension
+class WorkflowEmbargoExpiryExtension extends Extension
 {
     private static $db = array(
         'DesiredPublishDate'    => 'DBDatetime',
@@ -261,8 +261,6 @@ class WorkflowEmbargoExpiryExtension extends DataExtension
      */
     protected function onBeforeWrite()
     {
-        parent::onBeforeWrite();
-
         // only operate on staging content for this extension; otherwise, you
         // need to publish the page to be able to set a 'future' publish...
         // while the same could be said for the unpublish, the 'publish' state
