@@ -5,7 +5,7 @@ namespace Symbiote\AdvancedWorkflow\Tests;
 use SilverStripe\Core\Injector\Injector;
 use SilverStripe\Dev\SapphireTest;
 use SilverStripe\Security\Member;
-use SilverStripe\View\ArrayData;
+use SilverStripe\Model\ArrayData;
 use Symbiote\AdvancedWorkflow\Admin\WorkflowDefinitionExporter;
 use Symbiote\AdvancedWorkflow\Admin\WorkflowDefinitionImporter;
 use Symbiote\AdvancedWorkflow\DataObjects\ImportedWorkflowTemplate;
@@ -13,7 +13,7 @@ use Symbiote\AdvancedWorkflow\DataObjects\WorkflowAction;
 use Symbiote\AdvancedWorkflow\DataObjects\WorkflowDefinition;
 use Symbiote\AdvancedWorkflow\DataObjects\WorkflowTransition;
 use Symbiote\AdvancedWorkflow\Templates\WorkflowTemplate;
-use SilverStripe\ORM\ValidationException;
+use SilverStripe\Core\Validation\ValidationException;
 
 /**
  * Tests for workflow import/export logic.
