@@ -5,7 +5,7 @@ namespace Symbiote\AdvancedWorkflow\Admin;
 use Exception;
 use SilverStripe\Core\Injector\Injector;
 use SilverStripe\ORM\DataObject;
-use SilverStripe\ORM\ValidationException;
+use SilverStripe\Core\Validation\ValidationException;
 use Symbiote\AdvancedWorkflow\DataObjects\ImportedWorkflowTemplate;
 use Symbiote\AdvancedWorkflow\Templates\WorkflowTemplate;
 use Symfony\Component\Yaml\Yaml;

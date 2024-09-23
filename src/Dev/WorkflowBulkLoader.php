@@ -6,7 +6,7 @@ use SilverStripe\Control\Controller;
 use SilverStripe\Core\Injector\Injector;
 use SilverStripe\Dev\BulkLoader;
 use SilverStripe\Dev\BulkLoader_Result;
-use SilverStripe\ORM\ValidationException;
+use SilverStripe\Core\Validation\ValidationException;
 use Symbiote\AdvancedWorkflow\Admin\WorkflowDefinitionExporter;
 use Symbiote\AdvancedWorkflow\Admin\WorkflowDefinitionImporter;
 use Symbiote\AdvancedWorkflow\DataObjects\ImportedWorkflowTemplate;
