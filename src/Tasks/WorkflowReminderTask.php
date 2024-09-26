@@ -5,9 +5,11 @@ namespace Symbiote\AdvancedWorkflow\Tasks;
 use SilverStripe\Dev\BuildTask;
 use SilverStripe\CMS\Model\SiteTree;
 use SilverStripe\Control\Email\Email;
+use SilverStripe\PolyExecution\PolyOutput;
 use SilverStripe\ORM\FieldType\DBDatetime;
-use Symbiote\AdvancedWorkflow\DataObjects\WorkflowDefinition;
 use Symbiote\AdvancedWorkflow\DataObjects\WorkflowInstance;
+use Symfony\Component\Console\Command\Command;
+use Symfony\Component\Console\Input\InputInterface;
 
 /**
  * A task that sends a reminder email to users assigned to a workflow that has
@@ -17,12 +19,13 @@ use Symbiote\AdvancedWorkflow\DataObjects\WorkflowInstance;
  */
 class WorkflowReminderTask extends BuildTask
 {
-    protected $title       = 'Workflow Reminder Task';
-    protected $description = 'Sends out workflow reminder emails to stale workflow instances';
+    protected string $title = 'Workflow Reminder Task';
 
-    private static $segment = 'WorkflowReminderTask';
+    protected static string $description = 'Sends out workflow reminder emails to stale workflow instances';
 
-    public function run($request)
+    protected static string $commandName = 'WorkflowReminderTask';
+
+    protected function execute(InputInterface $input, PolyOutput $output): int
     {
         $sent = 0;
         if (WorkflowInstance::get()->count()) { // Don't attempt the filter if no instances -- prevents a crash
@@ -69,6 +72,7 @@ class WorkflowReminderTask extends BuildTask
                 }
             }
         }
-        echo "Sent $sent workflow reminder emails.\n";
+        $output->writeln("Sent $sent workflow reminder emails.");
+        return Command::SUCCESS;
     }
 }
