@@ -66,7 +66,7 @@ class WorkflowDefinitionImporter
         $convertLF = str_replace(array("\r\n", "\r"), "\n", $source ?? '');
         /*
          * Remove illegal colons from Transition/Action titles, otherwise sfYamlParser will barf on them
-         * Note: The regex relies on there being single quotes wrapped around these in the export .ss template
+         * Note: The regex relies on there being single quotes wrapped around these in the export template
          */
         $converted = preg_replace("#('[^:\n][^']+)(:)([^']+')#", "$1;$3", $convertLF ?? '');
         $parts = preg_split('#^---$#m', $converted ?? '', -1, PREG_SPLIT_NO_EMPTY);

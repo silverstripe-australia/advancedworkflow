@@ -3,6 +3,7 @@
 namespace Symbiote\AdvancedWorkflow\Actions;
 
 use SilverStripe\Control\Email\Email;
+use SilverStripe\Core\Injector\Injector;
 use SilverStripe\Forms\HeaderField;
 use SilverStripe\Forms\LiteralField;
 use SilverStripe\Forms\TextareaField;
@@ -14,7 +15,8 @@ use SilverStripe\ORM\FieldType\DBDatetime;
 use SilverStripe\Security\Member;
 use SilverStripe\Security\Security;
 use SilverStripe\Model\ArrayData;
-use SilverStripe\View\SSViewer;
+use SilverStripe\View\TemplateEngine;
+use SilverStripe\View\ViewLayerData;
 use Swift_RfcComplianceException;
 use Symbiote\AdvancedWorkflow\DataObjects\WorkflowAction;
 use Symbiote\AdvancedWorkflow\DataObjects\WorkflowInstance;
@@ -134,10 +136,7 @@ class NotifyUsersWorkflowAction extends WorkflowAction
             ]);
         }
 
-
-        $view = SSViewer::fromString($this->EmailTemplate);
-        $this->extend('updateView', $view);
-
+        $engine = Injector::inst()->create(TemplateEngine::class);
         foreach ($members as $member) {
             if ($member->Email) {
                 // We bind in the assignee at this point, as it changes each loop iteration
@@ -146,7 +145,7 @@ class NotifyUsersWorkflowAction extends WorkflowAction
                     $item->Assignee = ArrayData::create($assigneeVars);
                 }
 
-                $body = $view->process($item);
+                $body = $engine->renderString($this->EmailTemplate, ViewLayerData::create($item));
 
                 $email = Email::create();
                 try {
