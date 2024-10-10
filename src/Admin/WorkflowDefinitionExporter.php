@@ -108,9 +108,11 @@ class WorkflowDefinitionExporter
      */
     public function format($templateData)
     {
-        $viewer = SSViewer::execute_template(['type' => 'Includes', 'WorkflowDefinitionExport'], $templateData);
-        // Temporary until we find the source of the replacement in SSViewer
-        $processed = str_replace('&amp;', '&', $viewer ?? '');
+        $viewer = SSViewer::create(['type' => 'Includes', 'WorkflowDefinitionExport']);
+        $viewer->setRewriteHashLinks(false);
+        $viewer->includeRequirements(false);
+        // str_replace is temporary until we find the source of the replacement in SSViewer
+        $processed = str_replace('&amp;', '&', $viewer->process($templateData));
         // Clean-up newline "gaps" that SSViewer leaves behind from the placement of template control structures
         return preg_replace("#^\R+|^[\t\s]*\R+#m", '', $processed ?? '');
     }
