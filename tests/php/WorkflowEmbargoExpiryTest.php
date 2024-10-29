@@ -10,7 +10,7 @@ use SilverStripe\ORM\FieldType\DBDatetime;
 use SilverStripe\Translatable\Model\Translatable;
 use SilverStripe\Security\Member;
 use SilverStripe\Subsites\Extensions\SiteTreeSubsites;
-use SilverStripe\Versioned\Versioned;
+use SilverStripe\Versioned\Mode\Versioned;
 use Symbiote\AdvancedWorkflow\DataObjects\WorkflowAction;
 use Symbiote\AdvancedWorkflow\DataObjects\WorkflowDefinition;
 use Symbiote\AdvancedWorkflow\DataObjects\WorkflowTransition;

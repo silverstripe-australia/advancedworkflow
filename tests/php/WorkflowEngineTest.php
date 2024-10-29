@@ -5,7 +5,7 @@ namespace Symbiote\AdvancedWorkflow\Tests;
 use SilverStripe\CMS\Model\SiteTree;
 use SilverStripe\Dev\SapphireTest;
 use SilverStripe\ORM\DataObject;
-use SilverStripe\Versioned\Versioned;
+use SilverStripe\Versioned\Mode\Versioned;
 use Symbiote\AdvancedWorkflow\Actions\AssignUsersToWorkflowAction;
 use Symbiote\AdvancedWorkflow\Actions\NotifyUsersWorkflowAction;
 use Symbiote\AdvancedWorkflow\Actions\PublishItemWorkflowAction;

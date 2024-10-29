@@ -18,7 +18,7 @@ use SilverStripe\ORM\Queries\SQLSelect;
 use SilverStripe\Security\Member;
 use SilverStripe\Security\Permission;
 use SilverStripe\View\Requirements;
-use SilverStripe\Versioned\Versioned;
+use SilverStripe\Versioned\Mode\Versioned;
 use Symbiote\AdvancedWorkflow\Forms\AWRequiredFields;
 use Symbiote\AdvancedWorkflow\Jobs\WorkflowPublishTargetJob;
 use Symbiote\AdvancedWorkflow\Services\WorkflowService;
