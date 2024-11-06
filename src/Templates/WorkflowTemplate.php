@@ -70,6 +70,8 @@ use Symbiote\AdvancedWorkflow\DataObjects\WorkflowTransition;
  */
 class WorkflowTemplate
 {
+    // These are loosely typed to allow for easy conversion from YAML and backwards compatibility
+    // e.g. version is likely to be an int, though the DB column it goes into is a Varchar
     protected $name;
     protected $description;
     protected $version;
@@ -92,29 +94,29 @@ class WorkflowTemplate
         $this->sort = $sort;
     }
 
-    public function getName()
+    public function getName(): string
     {
-        return $this->name;
+        return (string) $this->name;
     }
 
-    public function getVersion()
+    public function getVersion(): string
     {
-        return $this->version;
+        return (string) $this->version;
     }
 
-    public function getDescription()
+    public function getDescription(): string
     {
-        return $this->description;
+        return (string) $this->description;
     }
 
-    public function getRemindDays()
+    public function getRemindDays(): int
     {
-        return $this->remindDays;
+        return (int) $this->remindDays;
     }
 
-    public function getSort()
+    public function getSort(): int
     {
-        return $this->sort;
+        return (int) $this->sort;
     }
 
     /**
