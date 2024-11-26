@@ -11,18 +11,23 @@
 // Embargo & expiry badge styling
 // 3 different statuses - embargo, expiry, embargo & expiry (both assigned)
 //  Note: CSS nesting convention based on SilverStripe admin styling
-.cms-tree.jstree {
-  span.badge.status-embargo,
-  span.badge.status-expiry,
-  span.badge.status-embargo_expiry {// sass-lint:disable-line class-name-format
-    background-color: $grey-light;
-    color: $brand-success;
+.badge.status-embargo,
+.badge.status-expiry,
+.badge.status-embargo_expiry {// sass-lint:disable-line class-name-format
+  background-color: $grey-light;
+  border-color: $brand-success;
+  color: $brand-success;
 
-    #cms-content-tools-CMSMain & {// sass-lint:disable-line no-ids
-      -webkit-box-shadow: 0 0 6px 2px $grey-light;
-      box-shadow: 0 0 6px 2px $grey-light;
-    }
+  #cms-content-tools-CMSMain & {// sass-lint:disable-line no-ids
+    -webkit-box-shadow: 0 0 6px 2px $grey-light;
+    box-shadow: 0 0 6px 2px $grey-light;
   }
+}
+
+.badge.status-workflow-approval {
+  background-color: #E8FAFF;
+  border-color: #0070B4;
+  color: #0070B4;
 }
 
 .workflow-field-diff {
