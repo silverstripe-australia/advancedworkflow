@@ -206,7 +206,7 @@ class NotifyUsersWorkflowAction extends WorkflowAction
      * @param Member $member An optional member to use. If null, will use the current logged in member
      * @return array
      */
-    public function getMemberFields(Member $member = null)
+    public function getMemberFields(?Member $member = null)
     {
         if (!$member) {
             $member = Security::getCurrentUser();

@@ -190,7 +190,7 @@ class WorkflowTemplate
      * @return WorkflowAction
      * @throws Exception
      */
-    protected function createAction($name, $actionTemplate, WorkflowDefinition $definition = null)
+    protected function createAction($name, $actionTemplate, ?WorkflowDefinition $definition = null)
     {
         $type = $actionTemplate['type'];
         if (!$type || !class_exists($type ?? '')) {
