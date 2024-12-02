@@ -324,7 +324,7 @@ class WorkflowInstance extends DataObject
      * @param WorkflowDefinition $definition
      * @param DataObject $for
      */
-    public function beginWorkflow(WorkflowDefinition $definition, DataObject $for = null)
+    public function beginWorkflow(WorkflowDefinition $definition, ?DataObject $for = null)
     {
         if (!$this->ID) {
             $this->write();
