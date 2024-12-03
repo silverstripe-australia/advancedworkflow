@@ -3,6 +3,7 @@
 namespace Symbiote\AdvancedWorkflow\Forms;
 
 use SilverStripe\Forms\RequiredFields;
+use SilverStripe\Dev\Deprecation;
 
 /**
  * Extends RequiredFields so we can prevent DO writes in AW's controller(s) without needing to catch Exceptions
@@ -11,11 +12,20 @@ use SilverStripe\Forms\RequiredFields;
  *
  * @author Russell Michell russell@silverstripe.com
  * @package advancedworkflow
+ *
+ * @deprecated 5.4.0 Will be renamed to Symbiote\AdvancedWorkflow\Forms\AWRequiredFieldsValidator
  */
 class AWRequiredFields extends RequiredFields
 {
     protected $data = array();
     protected static $caller;
+
+    public function __construct()
+    {
+        $message = 'Will be renamed to Symbiote\\AdvancedWorkflow\\Forms\\AWRequiredFieldsValidator';
+        Deprecation::noticeWithNoReplacment('5.4.0', $message, Deprecation::SCOPE_CLASS);
+        parent::__construct(...func_get_args());
+    }
 
     public function php($data)
     {
