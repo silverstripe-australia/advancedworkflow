@@ -7,7 +7,7 @@ use SilverStripe\Forms\CheckboxField;
 use SilverStripe\Forms\DropdownField;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\ReadonlyField;
-use SilverStripe\Forms\RequiredFields;
+use SilverStripe\Forms\Validation\RequiredFieldsValidator;
 use SilverStripe\Forms\TabSet;
 use SilverStripe\Forms\TextField;
 use SilverStripe\ORM\DataObject;
@@ -273,7 +273,7 @@ class WorkflowAction extends DataObject
 
     public function getValidator()
     {
-        return new RequiredFields('Title');
+        return new RequiredFieldsValidator('Title');
     }
 
     public function summaryFields()

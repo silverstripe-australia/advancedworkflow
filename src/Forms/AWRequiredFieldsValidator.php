@@ -2,30 +2,20 @@
 
 namespace Symbiote\AdvancedWorkflow\Forms;
 
-use SilverStripe\Forms\RequiredFields;
-use SilverStripe\Dev\Deprecation;
+use SilverStripe\Forms\Validation\RequiredFieldsValidator;
 
 /**
- * Extends RequiredFields so we can prevent DO writes in AW's controller(s) without needing to catch Exceptions
+ * Extends RequiredFieldsValidator so we can prevent DO writes in AW's controller(s) without needing to catch Exceptions
  * from DO->validate() all over the place.
  * Note specifically $this->getExtendedValidationRoutines() - anti-pattern anyone?
  *
  * @author Russell Michell russell@silverstripe.com
  * @package advancedworkflow
- *
- * @deprecated 5.4.0 Will be renamed to Symbiote\AdvancedWorkflow\Forms\AWRequiredFieldsValidator
  */
-class AWRequiredFields extends RequiredFields
+class AWRequiredFieldsValidator extends RequiredFieldsValidator
 {
     protected $data = array();
     protected static $caller;
-
-    public function __construct()
-    {
-        $message = 'Will be renamed to Symbiote\\AdvancedWorkflow\\Forms\\AWRequiredFieldsValidator';
-        Deprecation::noticeWithNoReplacment('5.4.0', $message, Deprecation::SCOPE_CLASS);
-        parent::__construct(...func_get_args());
-    }
 
     public function php($data)
     {
@@ -60,12 +50,12 @@ class AWRequiredFields extends RequiredFields
 
     /**
      * Allows for the addition of an arbitrary no. additional, dedicated and "extended" validation methods on classes
-     * that call AWRequiredFields.
+     * that call AWRequiredFieldsValidator.
      * To add specific validation methods to a caller:
      *
      * 1). Write each checking method using this naming prototype: public function extendedRequiredFieldsXXX(). All
      *     methods so named will be called.
-     * 2). Call AWRequiredFields->setCaller($this)
+     * 2). Call AWRequiredFieldsValidator->setCaller($this)
      *
      * Each extended method thus called, should return an array of a specific format. (See: static
      * $extendedMethodReturn on the caller)
@@ -115,11 +105,11 @@ class AWRequiredFields extends RequiredFields
 
     public function setCaller($caller)
     {
-        AWRequiredFields::$caller = $caller;
+        AWRequiredFieldsValidator::$caller = $caller;
     }
 
     public function getCaller()
     {
-        return AWRequiredFields::$caller;
+        return AWRequiredFieldsValidator::$caller;
     }
 }

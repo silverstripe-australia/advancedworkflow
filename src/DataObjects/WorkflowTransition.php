@@ -16,7 +16,7 @@ use SilverStripe\Security\Group;
 use SilverStripe\Security\Member;
 use SilverStripe\Security\Permission;
 use SilverStripe\Security\Security;
-use Symbiote\AdvancedWorkflow\Forms\AWRequiredFields;
+use Symbiote\AdvancedWorkflow\Forms\AWRequiredFieldsValidator;
 
 /**
  * A workflow transition.
@@ -177,7 +177,7 @@ class WorkflowTransition extends DataObject
 
     public function getValidator()
     {
-        $required = new AWRequiredFields('Title', 'ActionID', 'NextActionID');
+        $required = new AWRequiredFieldsValidator('Title', 'ActionID', 'NextActionID');
         $required->setCaller($this);
         return $required;
     }
@@ -275,7 +275,7 @@ class WorkflowTransition extends DataObject
      *
      * @param array $data
      * @return array
-     * @see {@link AWRequiredFields}
+     * @see {@link AWRequiredFieldsValidator}
      */
     public function extendedRequiredFieldsNotSame($data = null)
     {
