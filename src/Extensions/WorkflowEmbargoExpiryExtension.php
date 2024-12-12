@@ -19,7 +19,7 @@ use SilverStripe\Security\Member;
 use SilverStripe\Security\Permission;
 use SilverStripe\View\Requirements;
 use SilverStripe\Versioned\Versioned;
-use Symbiote\AdvancedWorkflow\Forms\AWRequiredFields;
+use Symbiote\AdvancedWorkflow\Forms\AWRequiredFieldsValidator;
 use Symbiote\AdvancedWorkflow\Jobs\WorkflowPublishTargetJob;
 use Symbiote\AdvancedWorkflow\Services\WorkflowService;
 use Symbiote\QueuedJobs\DataObjects\QueuedJobDescriptor;
@@ -430,14 +430,14 @@ class WorkflowEmbargoExpiryExtension extends Extension
      */
     public function getCMSValidator()
     {
-        $required = new AWRequiredFields();
+        $required = new AWRequiredFieldsValidator();
         $required->setCaller($this);
         return $required;
     }
 
     /**
-     * This is called in the AWRequiredFields class, this validates whether an Embargo and Expiry are not equal and that
-     * Embargo is before Expiry, returning the appropriate message when it fails.
+     * This is called in the AWRequiredFieldsValidator class, this validates whether an Embargo and Expiry are
+     * not equal and that Embargo is before Expiry, returning the appropriate message when it fails.
      *
      * @param $data
      * @return array
