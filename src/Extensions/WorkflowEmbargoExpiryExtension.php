@@ -11,6 +11,7 @@ use SilverStripe\Forms\HeaderField;
 use SilverStripe\Forms\LiteralField;
 use SilverStripe\Model\List\ArrayList;
 use SilverStripe\Core\Extension;
+use SilverStripe\Forms\Validation\CompositeValidator;
 use SilverStripe\ORM\DataQuery;
 use SilverStripe\ORM\FieldType\DBDatetime;
 use SilverStripe\ORM\FieldType\DBHTMLText;
@@ -425,14 +426,11 @@ class WorkflowEmbargoExpiryExtension extends Extension
         return $msg;
     }
 
-    /*
-     * Validate
-     */
-    public function getCMSValidator()
+    protected function updateCMSCompositeValidator(CompositeValidator $validator): void
     {
         $required = new AWRequiredFieldsValidator();
         $required->setCaller($this);
-        return $required;
+        $validator->addValidator($required);
     }
 
     /**
