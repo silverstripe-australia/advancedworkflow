@@ -57,10 +57,10 @@
                                 </span>
                                 <div class="btn-group workflow-transition-actions">
                                     <a href="$Top.TransitionLink('item', $ID, 'edit')" class="btn btn-secondary font-icon-edit workflow-field-open-dialog<% if $canEdit %><% else %> workflow-field-action-disabled<% end_if %>">
-                                        <span class="sr-only"><%t WorkflowField.EditAction "Edit" %></span>
+                                        <span class="visually-hidden"><%t WorkflowField.EditAction "Edit" %></span>
                                     </a>
                                     <a href="$Top.TransitionLink('item', $ID, 'delete')" data-securityid="$SecurityID" class="btn btn-secondary font-icon-trash workflow-field-delete<% if $canDelete %><% else %> workflow-field-action-disabled<% end_if %>">
-                                        <span class="sr-only"><%t WorkflowField.DeleteAction "Delete" %></span>
+                                        <span class="visually-hidden"><%t WorkflowField.DeleteAction "Delete" %></span>
                                     </a>
                                 </div>
                             </li>
