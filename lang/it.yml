@@ -83,6 +83,9 @@ it:
     has_one_Action: Azione
     many_many_Groups: Gruppi
     many_many_Users: Utenti
+  Symbiote\AdvancedWorkflow\Extensions\WorkflowApplicable:
+    has_one_WorkflowDefinition: 'Definizione flusso di lavoro'
+    many_many_AdditionalWorkflowDefinitions: 'Definizioni aggiuntive flusso di lavoro'
   Symbiote\AdvancedWorkflow\Forms\GridField\GridFieldExportAction:
     Export: Esporta
   UnpublishItemWorkflowAction:
