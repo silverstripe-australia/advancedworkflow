@@ -51,6 +51,9 @@ nl:
     db_Type: 'Soort veld'
     many_many_Groups: Groepen
     many_many_Users: Gebruikers
+  Symbiote\AdvancedWorkflow\Extensions\WorkflowApplicable:
+    has_one_WorkflowDefinition: 'Workflow definitie'
+    many_many_AdditionalWorkflowDefinitions: 'Aanvullende workflow definities'
   WorkflowAction:
     Author: Auteur
     COMMENT: Reactie
